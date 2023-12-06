@@ -1,0 +1,11 @@
+{% extends 'main.html' %}
+
+{% block content%}
+<h1>Room Template</h1>
+{% if room%}
+<div>
+  <span>@{{room.host.username}}</span>
+<h2>{{room.description}}</h2>
+</div>
+{%endif%}
+{% endblock %}

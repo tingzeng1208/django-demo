@@ -1,0 +1,36 @@
+install python and django,
+review setup virtual env and use activate script to activate
+review urls and views
+review debug with launch.json
+
+use separate template folder parallel to application folder
+
+define template dir in setting.py using BASEDIR
+
+use template, include, extension of main.html and block content
+
+use <str:pk> to use dynamic routing.
+
+use room to name the urls so that it can be used to represent the view.
+
+use "python manage.py migrate" to start the initial database tables (default sets by Django, including authentication tables)
+
+difference between auto_now and auto_now_add; auto_now_add only updated once at time of creation; difference between update and create
+
+string representation of a class: def __str__(self):
+
+run: "python manage.py makemigrations" to add new models to database
+
+http://127.0.0.1:8000/admin/login
+
+use "python manage.py createsuperuser"
+
+under "admin.py" use "admin.site.register(Room)" to add Room table under admin in admin panel
+
+Django query database: queryset = Modelname.objects.all() {.get(), .filter(), .exclude()}
+
+
+every time changes to database models, need to run "python manage.py makemigrations" and 
+then "python manage.py migrate"
+
+and then add those new models to admin.py to register them
