@@ -17,11 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.http import HttpResponse
+from django.urls import path
+from hubzone.views import *
 
+def index(request):
+    return HttpResponse("Starting page of Django Demo. <a href='/hubzone/'>Hubzone</a>")
 
-
-urlpatterns = [    
-
+urlpatterns = [  
+    path('', index, name='index'),  
     path('admin/', admin.site.urls),
-    path('', include('hubzone.urls')),
+    path('hubzone/', include('hubzone.urls')),
 ]
